@@ -50,7 +50,7 @@
         }
         #keyboard{
             margin: auto;
-            height: 484px;
+            height: 692px;
             bottom: 0;
             width: 950px;
             position: sticky;
@@ -63,9 +63,9 @@
             font-size: 60px;
             line-height: 89px;
             text-align: center;
-            width: 89px;
-            height: 89px;
-            margin: 3px;
+            width: 87px;
+            height: 140px;
+            margin: 4px;
             border-radius: 30px;
             background-color: rgb(90, 90, 90);
             float: left;
@@ -257,8 +257,8 @@
             {name: 'N', colorHighlight:'keyboardbutton', style:'', icon:'N' },
             {name: 'M', colorHighlight:'keyboardbutton', style:'', icon:'M' },
             {name: 'Enter', colorHighlight:'keyboardbutton', style:' style="width: 300px;"', icon:'SUBMIT' },
-            {name: ' ', colorHighlight:'keyboardbutton', style:'style="width: 332px;"', icon:'␣ ' },
-            {name: 'Backspace', colorHighlight:'keyboardbutton', style:' style="width: 300px;"', icon:'⌫ ' },
+            {name: ' ', colorHighlight:'keyboardbutton', style:'style="width: 326px;"', icon:'␣' },
+            {name: 'Backspace', colorHighlight:'keyboardbutton', style:' style="width: 300px;"', icon:'⌫' },
         ]
         const screenElement = document.getElementById("screen");
         let keyboardElement = document.getElementById("keyboard");
@@ -396,7 +396,7 @@
 
         };
         const recreateKeyboard = () => {
-            keyboardElement.innerHTML = "";
+            keyboardElement.innerHTML = `<div style="width: 100%; height: 50px;"></div>`;
             for(let i in keyboardKeys){
                 let name = keyboardKeys[i].name;
                 let style = keyboardKeys[i].style; // whole style attribution
