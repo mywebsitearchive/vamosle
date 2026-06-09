@@ -19,6 +19,7 @@
         }
         #screen{
             width: 100%;
+            margin-bottom: 692px;
         }
         .row{
             height: 261px;
@@ -53,7 +54,7 @@
             height: 692px;
             bottom: 0;
             width: 950px;
-            position: sticky;
+            position: fixed;
             background-color: rgb(41, 81, 41);
         }
         .keyboardbutton, .greenkeybutton, .yellowkeybutton, .blackkeybutton{
@@ -82,14 +83,32 @@
         .keyboardbutton:hover{
             background-color: rgb(90, 190, 90);
         }
+        #introduction{
+            padding: 40px;
+        }
         h1{
             color: rgb(90, 190, 90);
             font-size: 60px;
+        }
+        #introduction h1{
+            margin: auto;
+        }
+        ul{
+            font-size: 40px;
+            color: rgb(0, 255, 0);
         }
     </style>
 </head>
 <body onkeydown="addToScreen(String(event.key))">
     <div id="container">
+        <div id="introduction">
+            <h1>Vamosle!</h1>
+            <ul>
+                <li>Top 100 ATP Rankings as of 8 June 2026. The answers are always full names.</li><br>
+                <li>Your guess doesn't need to be a full name, as long as it's someone's first or last name. You can also use multiple names, as long as there are enough squares.</li><br>
+                <li>The list will be updated soon. Patientia vincit omnia.</li><br>
+            </ul>
+        </div>
         <div id="screen">
             <div class="row" id="currentrow">
                 <div class="letter"></div>
